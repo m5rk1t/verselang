@@ -1,0 +1,197 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*  apply a natural box layout model to all elements  */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*  ---------------- BODY --------------    */
+body {
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    font-size: 16px;
+}
+/*  ---------------- HEADER --------------    */
+header#start {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    padding: 1rem $gutter;
+    h1 {
+        font-size: 3rem;
+        font-weight: $normalWeight;
+    } // end of h1
+    h2 {
+        font-size: 2rem;
+        font-weight: $normalWeight;
+    } // end of h2    
+} //end of header
+
+
+/*  ---------------- NAVIGATION --------------    */
+nav {
+    background-color: $secondaryColor;
+    border-bottom: 1px solid rgba(0,0,0, 0.3);
+    ul li {
+        float: left;
+        width: 25%;
+        border-right: 1px solid rgba(0,0,0, 0.3);
+    }
+
+    ul li:last-child {border-right: none;}
+
+    ul li a {
+        display: block;
+        text-align: center;
+        font-weight: $boldWeight;
+        padding: .5rem 0;
+        color: $primaryColor;
+        text-decoration: none;
+        transition: background 0.75s ease, color 0.75s ease;
+    } // end of anchors
+
+    ul li.active a {
+        background-color: darken($secondaryColor, 10%);
+    }
+
+    ul li a:hover {
+        color: $secondaryColor;
+        background-color: $primaryColor;   
+    } // end hover 
+} // end nav
+
+/*  ---------------- MAIN --------------    */
+main {
+
+    figure.banner {width: 100%;}
+    figure.banner img {width: 100%;}
+
+    h1, h2 {
+        font-size: 2rem;
+        margin: 1rem $gutter;
+        color: $primaryColor;
+        border-bottom: .2rem dotted $primaryColor;
+    }
+    div.preklad {
+        display: grid;
+        grid-gap: 5px;
+        margin: .5rem $gutter;
+        article {
+            text-align: center;
+            border-width: 2px;
+            border-style: solid;
+            border-image: linear-gradient(to bottom, $primaryColor,rgba(73, 73, 73, 0)) 1 100%;;
+            p {
+                color: $fontColor;
+            }       
+            header 
+            {
+                line-height: 170%;
+                h3 {
+                    font-size: 1.5rem;
+                    color: lighten($primaryColor, 10%)
+                }
+                h4 {
+                    font-size: 1.2rem;
+                    color: lighten($primaryColor, 20%)
+                }
+            }
+            .verse {
+                line-height: 140%;
+            }
+            footer {
+                background-color: white;
+                p {               
+                    padding: .75rem 0;
+                    font-size: .9rem;
+                }
+            }
+
+        }
+    }
+    div.moznosti {
+        margin: 1rem $gutter;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        img {
+            margin: 5px ;
+            width: 200px;
+            height: 200px;
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+           }
+    }
+    .tbl {
+        margin: 2rem $gutter;
+    table {
+        overflow-x:auto;
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        border: 1px solid #ddd;
+      }
+      
+      th, td {
+        text-align: left;
+        padding: 8px;
+      }
+      
+      tr:nth-child(even){background-color: #f2f2f2}
+    }
+
+    .detail {
+        display: grid;
+        grid-gap: 2rem;
+        margin: .5rem $gutter;
+    }
+    .poem-form {
+        background-color: #F6F7F8;
+        border: 1px solid #D6D9DC;
+        border-radius: 3px;
+        
+        width: 80%;
+        padding: 50px;
+        margin: 0 0 40px 0;
+      }
+      .form-row {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      
+      .form-row input[type='text'], .form-row input[type='email'] {
+        background-color: #FFFFFF;
+        border: 1px solid #D6D9DC;
+        border-radius: 3px;
+        width: 100%;
+        padding: 7px;
+        font-size: 14px;
+      }
+      
+      .form-row label {
+        margin-bottom: 15px;
+      }
+}
+
+/*  ---------------- FOOTER --------------    */
+footer#end{
+    width: 100%;
+    background-color: $primaryColor;
+    p {
+        text-align: center;
+        color: $secondaryColor;
+        padding: .75rem 0;
+        font-size: .9rem;
+    }
+} // end footer
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

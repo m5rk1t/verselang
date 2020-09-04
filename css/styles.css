@@ -1,0 +1,251 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/*  apply a natural box layout model to all elements  */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*  ---------------- BODY --------------    */
+body {
+  font-family: "Cormorant Infant", serif;
+  font-weight: 400;
+  font-size: 16px; }
+
+/*  ---------------- HEADER --------------    */
+header#start {
+  background-color: #494949;
+  color: #e5e5e5;
+  padding: 1rem 2%; }
+  header#start h1 {
+    font-size: 3rem;
+    font-weight: 400; }
+  header#start h2 {
+    font-size: 2rem;
+    font-weight: 400; }
+
+/*  ---------------- NAVIGATION --------------    */
+nav {
+  background-color: #e5e5e5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+  nav ul li {
+    float: left;
+    width: 25%;
+    border-right: 1px solid rgba(0, 0, 0, 0.3); }
+  nav ul li:last-child {
+    border-right: none; }
+  nav ul li a {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    padding: .5rem 0;
+    color: #494949;
+    text-decoration: none;
+    transition: background 0.75s ease, color 0.75s ease; }
+  nav ul li.active a {
+    background-color: #cccccc; }
+  nav ul li a:hover {
+    color: #e5e5e5;
+    background-color: #494949; }
+
+/*  ---------------- MAIN --------------    */
+main figure.banner {
+  width: 100%; }
+main figure.banner img {
+  width: 100%; }
+main h1, main h2 {
+  font-size: 2rem;
+  margin: 1rem 2%;
+  color: #494949;
+  border-bottom: 0.2rem dotted #494949; }
+main div.preklad {
+  display: grid;
+  grid-gap: 5px;
+  margin: 0.5rem 2%; }
+  main div.preklad article {
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, #494949, rgba(73, 73, 73, 0)) 1 100%; }
+    main div.preklad article p {
+      color: black; }
+    main div.preklad article header {
+      line-height: 170%; }
+      main div.preklad article header h3 {
+        font-size: 1.5rem;
+        color: #636363; }
+      main div.preklad article header h4 {
+        font-size: 1.2rem;
+        color: #7c7c7c; }
+    main div.preklad article .verse {
+      line-height: 140%; }
+    main div.preklad article footer {
+      background-color: white; }
+      main div.preklad article footer p {
+        padding: .75rem 0;
+        font-size: .9rem; }
+main div.moznosti {
+  margin: 1rem 2%; }
+main .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  main .container img {
+    margin: 5px;
+    width: 200px;
+    height: 200px;
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%); }
+main .tbl {
+  margin: 2rem 2%; }
+  main .tbl table {
+    overflow-x: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd; }
+  main .tbl th, main .tbl td {
+    text-align: left;
+    padding: 8px; }
+  main .tbl tr:nth-child(even) {
+    background-color: #f2f2f2; }
+main .detail {
+  display: grid;
+  grid-gap: 2rem;
+  margin: 0.5rem 2%; }
+main .poem-form {
+  background-color: #F6F7F8;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  width: 80%;
+  padding: 50px;
+  margin: 0 0 40px 0; }
+main .form-row {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap; }
+main .form-row input[type='text'], main .form-row input[type='email'] {
+  background-color: #FFFFFF;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+  font-size: 14px; }
+main .form-row label {
+  margin-bottom: 15px; }
+
+/*  ---------------- FOOTER --------------    */
+footer#end {
+  width: 100%;
+  background-color: #494949; }
+  footer#end p {
+    text-align: center;
+    color: #e5e5e5;
+    padding: .75rem 0;
+    font-size: .9rem; }
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+@media only screen and (min-width: 1140px) {
+  main div.preklad {
+    grid-template-columns: 1fr 1fr; }
+  main div.detail {
+    grid-template-columns: 1fr 1fr 1fr; } }
